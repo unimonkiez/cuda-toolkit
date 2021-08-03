@@ -389,7 +389,7 @@ class AbstractLinks {
     getLocalURLFromCudaVersion(version) {
         const urlString = this.cudaVersionToURL.get(`${version}`);
         if (urlString === undefined) {
-            throw new Error(`Invalid version: ${version}`);
+            throw new Error(`Invalid version: ${version}, available version are ${Array.from(this.cudaVersionToURL.keys()).join(', ')}.`);
         }
         return new URL(urlString);
     }
@@ -546,6 +546,10 @@ class WindowsLinks extends links_1.AbstractLinks {
             [
                 '9.2.148',
                 'https://developer.nvidia.com/compute/cuda/9.2/Prod2/network_installers2/cuda_9.2.148_win10_network'
+            ],
+            [
+                '9.0.176',
+                'http://developer.nvidia.com/compute/cuda/9.0/Prod/network_installers/cuda_9.0.176_win10_network-exe'
             ],
             [
                 '8.0.61',
