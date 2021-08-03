@@ -11,7 +11,11 @@ export abstract class AbstractLinks {
   getLocalURLFromCudaVersion(version: SemVer): URL {
     const urlString = this.cudaVersionToURL.get(`${version}`)
     if (urlString === undefined) {
-      throw new Error(`Invalid version: ${version}`)
+      throw new Error(
+        `Invalid version: ${version}, available version are ${Array.from(
+          this.cudaVersionToURL.keys()
+        ).join(', ')}.`
+      )
     }
     return new URL(urlString)
   }
