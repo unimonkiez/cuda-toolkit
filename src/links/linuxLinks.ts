@@ -53,6 +53,10 @@ export class LinuxLinks extends AbstractLinks {
         'https://developer.nvidia.com/compute/cuda/9.2/Prod2/local_installers/cuda_9.2.148_396.37_linux'
       ],
       [
+        '9.0.176',
+        'https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run'
+      ],
+      [
         '8.0.61',
         'https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda_8.0.61_375.26_linux-run'
       ]
